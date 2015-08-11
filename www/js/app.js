@@ -31,6 +31,37 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   // Each state's controller can be found in controllers.js
   $stateProvider
 
+    .state ( 'pagina1' , {
+        url:"/pagina1" ,
+        templateUrl:'paginas/pagina1.html ' 
+    })
+	
+	.state ( 'pagina2' , {
+        url:"/pagina2" ,
+		abstract: true,
+        templateUrl:'paginas/pagina2.html ' 
+    })
+	
+	.state ( 'pagina2.hijo1' , {
+        url:"/hijo1" ,
+		views: {
+      'pagina2-hijo1': {
+        templateUrl: 'paginas/pagina2-hijo1.html',
+        controller: 'hijo1Ctrl'
+      }
+    }
+  })
+	
+	.state ( 'pagina2.hijo2' , {
+        url:"/hijo2" ,
+		views: {
+      'pagina2-hijo2': {
+        templateUrl: 'paginas/pagina2-hijo2.html',
+        controller: 'hijo2Ctrl'
+     }
+    }
+  })
+	
   // setup an abstract state for the tabs directive
     .state('tab', {
     url: '/tab',
@@ -80,17 +111,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('pagina1');
 
 });
 
-angular.module('miApp', [])
 
-.controller('miCtrl', function($scope) {
-    $scope.names = [
-        {name:'Jani',country:'Norway'},
-        {name:'Hege',country:'Sweden'},
-        {name:'Kai',country:'Denmark'}
-    ];
-});
 

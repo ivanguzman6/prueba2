@@ -23,49 +23,9 @@
     <script src="js/controllers.js"></script>
     <script src="js/services.js"></script>
   </head>
-  <body clas="ionic-body active-preview">
-		<div class="ionic-body active-preview" ng-app="miApp" ng-controller="miCtrl" >
-			<div class="bar bar-header bar-dark">
-			  <h1 class="h1 title">Lista de Nombres</h1>
-			</div>
-			 <ion-view title="Event Attendees" left-buttons="leftButtons">
-			<ion-content>
-			<div class="list list-inset">
-				 <label class="item item-input">
-					<span class="input-label">Filtro de b&uacute;squeda</span>
-					<input type ="text" ng-model="filtro"></input>
-				 </label>
-				
-			
-				<ul class="list">
-				  <li class="item" ng-repeat="x in names | filter:filtro">
-					{{ x.name + ', ' + x.country }}
-				  </li>
-				</ul>
-				 
-				
-			</div>
-			</ion-content>
-			 </ion-view>
-			
-		</div>
-  </body>
   
+  <body ng-app="starter"> 
+   <ion-nav-view></ion-nav-view>
+  </body> 
   
-  
-  <!-- <body ng-app="starter"> -->
-    <!--
-      The nav bar that will be updated as we navigate between views.
-    -->
-    <!-- <ion-nav-bar class="bar-stable">
-      <ion-nav-back-button>
-      </ion-nav-back-button>
-    </ion-nav-bar> -->
-    <!--
-      The views will be rendered in the <ion-nav-view> directive below
-      Templates are in the /templates folder (but you could also
-      have templates inline in this html file if you'd like).
-    -->
-   <!--  <ion-nav-view></ion-nav-view>
-  </body> -->
 </html>
