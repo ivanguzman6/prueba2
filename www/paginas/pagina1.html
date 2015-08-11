@@ -1,9 +1,17 @@
 <ion-view view-title="Pagina 1">
 	<ion-content class="padding">
-	<p class="details">detalle1</p>
-	<p class="details">
-		Nombre = {{nombre}}
-	</p>
+	<label class="item item-input">
+		<input type="text" placeholder="Nombre">
+	</label>
+	<label class="item item-input">
+		<input type="text" placeholder="Apellido">
+	</label>
+	<label class="item item-input">
+		<input type="date" placeholder="Fecha">
+	</label>
+	<button class="button button-positive" ng-click="salvar()">
+		Salvar
+	</button>
 	</ion-content>
 </ion-view> 
 
